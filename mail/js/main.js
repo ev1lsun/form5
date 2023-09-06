@@ -19,9 +19,9 @@ this.paySample4 = function () {
     var accountId = $('#email-sample-4').val();
 
     widget.charge({ // options
-        publicId: 'test_api_00000000000000000000002', //id из личного кабинета
-        description: 'Пожертвование в фонд ...', //назначение
-        amount: amount, //сумма
+        publicId: 'pk_3964da3d612302cfbf41b94414ec6', //id из личного кабинета
+        description: 'Пожертвование в фонд тестов', //назначение
+        amount: 1, //сумма
         currency: 'RUB', //валюта
         accountId: accountId, //идентификатор плательщика (обязательно для создания подписки)
         email: accountId,
