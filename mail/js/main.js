@@ -1,6 +1,6 @@
 this.pay = function () {
  var widget = new cp.CloudPayments();
-    widget.pay('auth', // или 'charge'
+    widget.pay('charge', // или 'charge'
         { //options
             publicId: 'pk_3964da3d612302cfbf41b94414ec6', //id из личного кабинета
             description: 'Оплата товаров в example.com', //назначение
