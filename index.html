@@ -64,7 +64,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     
     <script src="mail/js/main.js"></script>
-      <script>this.paySample4 = function () {
+      <script>
+this.paySample4 = function () {
     var widget = new cp.CloudPayments();
 
     var data = { //данные дарителя
@@ -99,8 +100,11 @@
     function (reason, options) { // fail
         //действие при неуспешной оплате
     });
-};</script> 
-    <script>
+};
+</script> 
+<script> 
+$('#payment').click(paySample4)
+</script>
         $(function() {
             $('.contact-form__input_tel').mask('+7(000)000-00-00');
         });
