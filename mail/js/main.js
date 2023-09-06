@@ -47,4 +47,4 @@ this.pay = function () {
     )
 };
 
-document.querySelector('#payment').onclick = pay
+$('#payment').click(pay);
