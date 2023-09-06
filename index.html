@@ -103,10 +103,12 @@ this.paySample4 = function () {
 };
 </script> 
 <script> 
-$('#payment').click(paySample4);
+$(function() {
+           $('#payment').click(paySample4);
+        });
 </script>
-<script> 
-        $(function() {
+<script>
+$(function() {
             $('.contact-form__input_tel').mask('+7(000)000-00-00');
         });
     </script>
