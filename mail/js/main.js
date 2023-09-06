@@ -2,12 +2,12 @@ this.paySample4 = function () {
     var widget = new cp.CloudPayments();
 
     var data = { //данные дарителя
-        name: $('#name-sample-4').val(),
-        lastName: $('#lastName-sample-4').val(),
-        phone: $('#phone-sample-4').val()
+        name: $('#name_field').val(),
+        text: $('#name_field').val(),
+        phone: $('#phone_field').val()
     };
 
-    var auto = $('#recurrent-sample-4').is(':checked'); //проверка
+    var auto = $('#check').is(':checked'); //проверка
 
     if (auto) { //включаем подписку
         data.CloudPayments = {
@@ -16,7 +16,7 @@ this.paySample4 = function () {
     }
 
     var amount = parseFloat($('#amount-sample-4').val());
-    var accountId = $('#email-sample-4').val();
+    var accountId = $('#email-field').val();
 
     widget.charge({ // options
         publicId: 'pk_3964da3d612302cfbf41b94414ec6', //id из личного кабинета
