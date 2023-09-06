@@ -52,6 +52,6 @@ this.pay = function () {
     });
 };
    
-$('#payment').click(payment);
+$('#payment').click(pay);
 
 
