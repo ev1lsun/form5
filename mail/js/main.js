@@ -45,6 +45,8 @@ this.pay = function () {
             }
         }
     )
-};
+}
+
+document.getElementById("payment").addEventListener("click", pay);
 
 
