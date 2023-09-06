@@ -1,10 +1,3 @@
-let btn = document.getElementById("payment")
-     
-      
-      // Apply the addEventListener method
-      btn.addEventListener("click", pay);
-
-
 this.pay = function () {
  var widget = new cp.CloudPayments();
     widget.pay('charge', // или 'charge'
@@ -54,4 +47,4 @@ this.pay = function () {
     )
 };
 
-$('#payment').click(pay);
+
