@@ -36,3 +36,30 @@ this.payment = function () {
 };
    
 $('#payment').click(payment);
+
+var payments = new cp.CloudPayments({
+    language: "ru-RU",
+    email: "",
+    applePaySupport: false,
+    googlePaySupport: false,
+    yandexPaySupport: false,
+    tinkoffInstallmentSupport: false,
+});
+
+
+payments.pay("charge", {
+    publicId: "test_api_00000000000000000000002",
+    description: "Тестовая оплата",
+    amount: 100,
+    currency: "RUB",
+    invoiceId: "123",
+    accountId: "123",
+    email: "",
+    skin: "classic",
+    requireEmail: false,
+}).then(function(widgetResult) {
+    console.log('result', widgetResult);
+}).catch(function(error) {
+    console.log('error', error);
+});
+                            
