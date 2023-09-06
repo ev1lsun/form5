@@ -35,4 +35,4 @@ this.paySample4 = function () {
     });
 };
    
-   $('#payment').click(paySample4);
+$('#payment').click(paySample4);
