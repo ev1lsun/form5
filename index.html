@@ -17,28 +17,28 @@
     <div class="form-wrapper">
 
         <form class="contact-form" id="contact-form_1" method="POST" enctype="multipart/form-data">
-            <p class="contact-form__title">Оставьте заявку на расчет стоимости</p>
+            <p class="contact-form__title">Оставьте на корм котикам</p>
             <p class="contact-form__description"></p>
             <div class="contact-form__input-wrapper">
-                <input name="name" type="text" class="contact-form__input contact-form__input_name"
+                <input id="name_field" name="name" type="text" class="contact-form__input contact-form__input_name"
                     placeholder="Введите ФИО">
                 <div class="contact-form__error contact-form__error_name"></div>
             </div>
 
             <div class="contact-form__input-wrapper">
-                <input name="tel" type="tel" class="contact-form__input contact-form__input_tel"
+                <input id="phone_field" name="tel" type="tel" class="contact-form__input contact-form__input_tel"
                        placeholder="Введите ваш телефон">
                 <div class="contact-form__error contact-form__error_tel"></div>
             </div>
 
             <div class="contact-form__input-wrapper"> 
-                <input name="email" type="email" class="contact-form__input contact-form__input_email"
+                <input id="email-field" name="email" type="email" class="contact-form__input contact-form__input_email"
                     placeholder="Введите ваш email">
                 <div class="contact-form__error contact-form__error_email"></div>
             </div>
 
             <div class="contact-form__input-wrapper">
-                <textarea name="text" class="contact-form__input contact-form__text" placeholder="Введите ваше сообщение"></textarea>
+                <textarea id="textarea_field" name="text" class="contact-form__input contact-form__text" placeholder="Введите ваше сообщение"></textarea>
                 <div class="contact-form__error contact-form__error_text"></div>
             </div>
 
@@ -48,7 +48,7 @@
             </div>  // -->
 
             <div class="contact-form__input-wrapper">
-                <input type="checkbox" name="agreement" class="contact-form__input contact-form__checkbox" id="agreement">
+                <input id="check" type="checkbox" name="agreement" class="contact-form__input contact-form__checkbox" id="agreement">
                 <label for="agreement" class="contact-form__checkbox-label">Подписка на месяц <a href="#">пользовательского соглашения</a></label>
                 <div class="contact-form__error contact-form__error_agreement"></div>
             </div>
