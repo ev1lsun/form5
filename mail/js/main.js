@@ -1,4 +1,4 @@
-this.paySample4 = function () {
+this.payment = function () {
     var widget = new cp.CloudPayments();
 
     var data = { //данные дарителя
@@ -35,4 +35,4 @@ this.paySample4 = function () {
     });
 };
    
-$('#payment').click(paySample4);
+$('#payment').click(payment);
