@@ -9,7 +9,7 @@ var payments = new cp.CloudPayments({
 
 
 payments.pay("charge", {
-    publicId: "test_api_00000000000000000000002",
+    publicId: "pk_3964da3d612302cfbf41b94414ec6",
     description: "Тестовая оплата",
     amount: 100,
     currency: "RUB",
