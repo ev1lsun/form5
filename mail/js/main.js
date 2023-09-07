@@ -23,7 +23,7 @@ payments.pay("charge", {
     console.log('result', widgetResult);
 }).catch(function(error) {
     console.log('error', error);
-})
+});
 
 
 
