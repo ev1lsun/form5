@@ -1,27 +1,36 @@
-var payments = new cp.CloudPayments({
-    language: "ru-RU",
-    email: "",
-    applePaySupport: true,
-    googlePaySupport: true,
-    yandexPaySupport: true,
-    tinkoffInstallmentSupport: true,
-});
+var widget = new cp.CloudPayments();
 
+    var data = { //данные дарителя
+        name: $('#name-sample-4').val(),
+        lastName: $('#lastName-sample-4').val(),
+        phone: $('#phone-sample-4').val()
+    };
 
-payments.pay("charge", {
-    publicId: "pk_3964da3d612302cfbf41b94414ec6",
-    description: "Тестовая оплата",
-    amount: 100,
-    currency: "RUB",
-    invoiceId: "123",
-    accountId: "123",
-    email: "",
-    skin: "classic",
-    requireEmail: false,
-}).then(function(widgetResult) {
-    console.log('result', widgetResult);
-}).catch(function(error) {
-    console.log('error', error);
-});
+    var auto = $('#recurrent-sample-4').is(':checked'); //проверка
+
+    if (auto) { //включаем подписку
+        data.CloudPayments = {
+            recurrent: { interval: 'Month', period: 1 } //один раз в месяц начиная со следующего месяца
+        }
+    }
+
+    var amount = parseFloat($('#amount-sample-4').val());
+    var accountId = $('#email-sample-4').val();
+
+    widget.charge({ // options
+        publicId: 'test_api_00000000000000000000002', //id из личного кабинета
+        description: 'Пожертвование в фонд ...', //назначение
+        amount: amount, //сумма
+        currency: 'RUB', //валюта
+        accountId: accountId, //идентификатор плательщика (обязательно для создания подписки)
+        email: accountId,
+        data: data
+    },
+    function (options) { // success
+        //действие при успешной оплате
+    },
+    function (reason, options) { // fail
+        //действие при неуспешной оплате
+    });
 
 $('#check-btn').click(paySample4);
