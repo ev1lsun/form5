@@ -1,4 +1,4 @@
-function pay() {
+
  var payments = new cp.CloudPayments({
     language: "ru-RU",
     email: "",
@@ -23,8 +23,7 @@ payments.pay("charge", {
     console.log('result', widgetResult);
 }).catch(function(error) {
     console.log('error', error);
-})}
+})
 
-$('#check-btn').click(pay);
 
 
