@@ -2,7 +2,7 @@ function pay() {
  var widget = new cp.CloudPayments();
     widget.pay('charge', // или 'charge'
         { //options
-            publicId: 'test_api_00000000000000000000002', //id из личного кабинета
+            publicId: 'pk_3964da3d612302cfbf41b94414ec6', //id из личного кабинета
             description: 'Оплата товаров в example.com', //назначение
             amount: 100, //сумма
             currency: 'RUB', //валюта
