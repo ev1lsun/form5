@@ -47,6 +47,6 @@ function pay () {
     )
 }
 
-$('#checkout').click(pay);
+$('#check-btn').click(pay);
 
 
