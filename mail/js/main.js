@@ -1,5 +1,4 @@
-
- var payments = new cp.CloudPayments({
+var payments = new cp.CloudPayments({
     language: "ru-RU",
     email: "",
     applePaySupport: true,
@@ -24,6 +23,5 @@ payments.pay("charge", {
 }).catch(function(error) {
     console.log('error', error);
 });
-
 
 
