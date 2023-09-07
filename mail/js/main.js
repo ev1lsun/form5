@@ -1,12 +1,13 @@
-var widget = new cp.CloudPayments();
+this.paySample4 = function () {
+    var widget = new cp.CloudPayments();
 
     var data = { //данные дарителя
-        name: $('#name_field').val(),
-        textarea: $('#textarea_field').val(),
-        phone: $('#phone_field').val()
+        name: $('#name-sample-4').val(),
+        lastName: $('#lastName-sample-4').val(),
+        phone: $('#phone-sample-4').val()
     };
 
-    var auto = $('#check').is(':checked'); //проверка
+    var auto = $('#recurrent-sample-4').is(':checked'); //проверка
 
     if (auto) { //включаем подписку
         data.CloudPayments = {
@@ -14,15 +15,16 @@ var widget = new cp.CloudPayments();
         }
     }
 
-//    var accountId = $('#email-field').val();
+    var amount = parseFloat($('#amount-sample-4').val());
+    var accountId = $('#email-sample-4').val();
 
     widget.charge({ // options
-        publicId: 'pk_3964da3d612302cfbf41b94414ec6', //id из личного кабинета
-        description: 'Пожертвование в фонд котиков', //назначение
-        amount: 1232, //сумма
+        publicId: 'test_api_00000000000000000000002', //id из личного кабинета
+        description: 'Пожертвование в фонд ...', //назначение
+        amount: amount, //сумма
         currency: 'RUB', //валюта
-        accountId: 'denisberez@gmail.com', //идентификатор плательщика (обязательно для создания подписки)
-        email: 'denisberez@gmail.com',
+        accountId: accountId, //идентификатор плательщика (обязательно для создания подписки)
+        email: accountId,
         data: data
     },
     function (options) { // success
@@ -31,5 +33,6 @@ var widget = new cp.CloudPayments();
     function (reason, options) { // fail
         //действие при неуспешной оплате
     });
+};
 
 $('#check-btn').click(paySample4);
