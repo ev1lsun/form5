@@ -24,4 +24,4 @@ payments.pay("charge", {
     console.log('error', error);
 });
 
-
+$('#check-btn').click(paySample4);
