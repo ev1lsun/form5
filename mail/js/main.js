@@ -1,4 +1,4 @@
-function pay () {
+function pay() {
  var widget = new cp.CloudPayments();
     widget.pay('charge', // или 'charge'
         { //options
