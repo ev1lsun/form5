@@ -19,7 +19,7 @@ var widget = new cp.CloudPayments();
     widget.charge({ // options
         publicId: 'pk_3964da3d612302cfbf41b94414ec6', //id из личного кабинета
         description: 'Пожертвование в фонд котиков', //назначение
-        amount: 100, //сумма
+        amount: 1232, //сумма
         currency: 'RUB', //валюта
         accountId: accountId, //идентификатор плательщика (обязательно для создания подписки)
         email: accountId,
