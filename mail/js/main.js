@@ -52,8 +52,6 @@ function pay() {
             }
         }
     )
-}
-
-$('#check-btn').click(pay);
+};
 
 
