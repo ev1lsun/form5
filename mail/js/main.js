@@ -15,7 +15,7 @@ this.paySample4 = function () {
         }
     }
 
-//   var amount = parseFloat($('#amount-field').val());
+ var amount = parseFloat($('#amount-field').val());
     var accountId = $('#email-field').val();
 
     widget.charge({ // options
