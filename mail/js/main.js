@@ -7,7 +7,7 @@ this.paySample4 = function () {
         phone: $('#phone_field').val()
     };
 
-    var auto = $('#recurrent-sample-4').is(':checked'); //проверка
+    var auto = $('#check').is(':checked'); //проверка
 
     if (auto) { //включаем подписку
         data.CloudPayments = {
