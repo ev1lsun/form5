@@ -1,5 +1,12 @@
 function pay() {
- var widget = new cp.CloudPayments();
+ var widget = new cp.CloudPayments({
+    language: "ru-RU",
+    email: "",
+    applePaySupport: true,
+    googlePaySupport: true,
+    yandexPaySupport: true,
+    tinkoffInstallmentSupport: true,
+});
     widget.pay('charge', // или 'charge'
         { //options
             publicId: 'pk_3964da3d612302cfbf41b94414ec6', //id из личного кабинета
