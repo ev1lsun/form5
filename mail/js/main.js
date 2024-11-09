@@ -74,7 +74,7 @@ this.paySample4 = function () {
         requireEmail: false,
         data: data,
         skin: "modern",
-        autoClose: 3,
+        autoClose: 5,
         payer: {
             firstName: 'Тест',
             lastName: 'Тестов',
@@ -90,19 +90,20 @@ this.paySample4 = function () {
 
     },
 
-        {
-            onSuccess: function (options) {
-                window.location.href = 'https://google.ru';
-            },
-            onFail: function (reason, options) {
-                // fail
-                // действие при неуспешной оплате
-            },
-            onComplete: function (paymentResult, options) {
-                //  Вызывается как только виджет получает от api.cloudpayments ответ с результатом транзакции.
-            },
-        }
-    );
+
+    
+        function(options) {
+            window.location.href = 'https://www.memify.ru/highfive/';
+        },
+        function(reason, options) {
+            // fail
+            // действие при неуспешной оплате
+        },
+        function(paymentResult, options) {
+            //  Вызывается как только виджет получает от api.cloudpayments ответ с результатом транзакции.
+        },
+    
+);
 };
 
 $('#check-btn').click(paySample4);
